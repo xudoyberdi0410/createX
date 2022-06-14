@@ -88,7 +88,7 @@ header{
     line-height: 150%;
 }
 .hero{
-    background-image: url('../images/header-bg-image.jpg');
+    background-image: url('../images/header/header-bg-image.jpg');
     background-size: cover;
     color: var(--white);
 }
@@ -326,7 +326,7 @@ p{
 }
 /* services */
 .services{
-    background-image: url('../images/background-services.jpg');
+    background-image: url('../images/services/background-services.jpg');
     padding-top: 200px;
 }
 .our-services{
@@ -449,6 +449,7 @@ p{
     gap: 30px;
 }
 .partfolio-crausel .wrapper .wrapper-item{
+    overflow: hidden;
     width: 390px;
     height: 440px;
     padding-bottom: 24px;
@@ -456,23 +457,37 @@ p{
     border-radius: 4px;
     text-align: center;
     transition: all .3s ease-in-out;
+    position: relative;
 }
 .partfolio-crausel .wrapper .wrapper-item img{
     transition: all .3s ease;
+    top: 0;
+    left: 0;
     height: 345px;
     width: 390px;
+    position: absolute;
+    z-index: 5;
 }
-.partfolio-crausel .wrapper .wrapper-item:hover img{
-    transition: all .3s ease-in-out;
-    height: 277px;
-    width: 390px;
+.partfolio-crausel .wrapper .wrapper-item .txt{
+    position: absolute;
+    z-index: 6;
+    bottom: -55px;
+    right: 0;
+    left: 0;
+    background: var(--white);
+    transition: .3s;
+}
+
+.partfolio-crausel .wrapper .wrapper-item:hover .txt{
+    bottom: 10px;
 }
 .partfolio-crausel .wrapper .wrapper-item:hover .btn{
     display: inline-block;
+    margin: 10px 0 0;
 }
 .partfolio-crausel .wrapper .wrapper-item .btn{
-    display: none;
-    margin: 10px 0 0;
+    display: inline-block;
+    margin: 20px 0 0;
     position: relative;
     border: 1px solid var(--primary);
     color: var(--primary);
@@ -485,4 +500,112 @@ p{
 }
 .partfolio-crausel .wrapper .wrapper-item .btn:hover a{
     color: var(--white);
+}
+/* partners */
+.partners{
+    background-color: var(--gray-200);
+    padding: 80px;
+}
+.partners-container{
+    position: relative;
+    text-align: center;
+}
+.partners-container h2{
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--gray-900);
+    margin-bottom: 60px;
+}
+.partners-container .wrapper{
+    gap: 40px;
+    margin: 0;
+    margin-bottom: 120px;
+}
+.partners-container .wrapper img{
+    width: 120px;
+    -webkit-filter: grayscale(1);
+    transition: all .3s ease-in;
+}
+.partners-container img:hover{
+    -webkit-filter: none;
+}
+.partners-container .testimonials{
+    text-align: start;
+    max-width: 600px;
+}
+.partners-container .testimonials p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-800);
+    margin-bottom: 20px;
+}
+.partners-container .testimonials .author{
+    display: flex;
+    justify-content: space-between;
+}
+.partners-container .testimonials .author span{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-900);
+}
+.partners-container .testimonials .author p{
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-700);
+}
+.partners-container .testimonials .author .arrows{
+    display: flex;
+    gap: 30px;
+}
+.partners-container .testimonials .author .arrows .arrow{
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    opacity: 1;
+    background-color: inherit;
+}
+.partners-container .testimonials .author .arrows .arrow:hover{
+    background-color: var(--primary);
+}
+.partners-container .testimonials .author .arrows .arrow:hover path{
+    fill: var(--white);
+}
+.partners-container .testimonials .partners-bg{
+    position: absolute;
+    right: 0;
+    bottom: -25%;
+}
+/* static */
+.statisc-container{
+    text-align: center;
+    padding-top: 170px;
+    padding-bottom: 150px;
+}
+.statisc-container h2{
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    margin-bottom: 60px;
+}
+.statisc-container .wrapper{
+    gap: 48px;
+}
+.statisc-container .wrapper .wrapper-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+}
+.statisc-container .wrapper .wrapper-item span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-900);
 }
