@@ -6,7 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
 </head>
-<body style="text-align: center;">
+<body class="flex-center">
     <h1>Coming Soon</h1>
+    <div class="circle flex-center">
+        <div class="circle-small flex-center">0%</div>
+    </div>
+<style>
+body{
+    height: 95vh;
+    text-align: center;
+    background-color: #222;
+    flex-direction: column;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle{
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50%;
+    background: conic-gradient( red var(--max), #333333 0%);
+}
+.circle-small{
+    width: 45vmin;
+    height: 45vmin;
+    background-color: #222;
+    border-radius: 50%;
+}
+</style>
+<script>
+    let max = 5
+    setInterval(()=>{
+        if (max == 101) return false
+        document.querySelector('.circle-small').textContent = `${max}%`
+        document.querySelector('.circle').setAttribute('style', `--max: ${max}%`)
+        max++
+    }, 100)
+
+</script>
 </body>
 </html>
