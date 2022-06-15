@@ -26,6 +26,7 @@
 }
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 a:hover{
     text-decoration: underline;
@@ -689,35 +690,11 @@ p{
     gap: 8px;
     width: 100%;
 }
-.form form label.checkbox{
-    display: flex;
-    gap: 12px;
-    flex-direction: row;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.form form label.checkbox input:checked ~ .checkmark:after {
-    display: block;
-}
-.form form label.checkbox .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
+
 .form form label span{
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    
     color: var(--gray-800);
 }
 .form form label input{
@@ -726,21 +703,174 @@ p{
     border: 1px solid var(--gray-400);
     border-radius: 4px;
 }
-.form form label input[type="checkbox"]{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+
+.form form label.checkbox{
+    flex-direction: row;
 }
-.form form label input[type="checkbox"]:checked ~ .checkmark{
+.form form label.checkbox span.checkmark{
+    display: none;
+    width: 16px;
+    height: 16px;
+}
+.form form label.checkbox input:checked{
+    display: none;
+}
+.form form label.checkbox input{
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+    border: 1px solid var(--white);
+}
+.form form label.checkbox input:checked ~ span.checkmark{
+    display: inline-block;
+}
+/* footer */
+footer{
+    background-color: var(--gray-900);
+}
+.footer-container{
+    padding: 80px 0;
+}
+.footer-container .row-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container .row-1 p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--white);
+    opacity: .6;
+}
+.footer-container .row-1 .about-footer{
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    width: 460px;
+}
+.footer-container .row-1 .about-footer .links{
+    display: flex;
+    gap: 60px;
+}
+.footer-container .row-1 .about-footer .links .social{
+    display: flex;
+    gap: 18px;
+}
+.footer-container .row-1 .about-footer .links .social a{
+    opacity: .6;
+    transition: .3s;
+}
+.footer-container .row-1 .about-footer .links .social a:hover{
+    opacity: 1;
+}
+.footer-container .row-1 .subscribe h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+.footer-container .row-1 .subscribe form{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.footer-container .row-1 .subscribe input{
+    padding: 12px 16px;
+    width: calc(100% - 18px);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    outline-color: #000;
+    height: 44px;
+    padding-right: 131px;
+    color: var(--white);
+}
+.footer-container .row-1 .subscribe button{
+    max-height: 44px;
+    padding: 0 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 0px 4px 4px 0px;
     background-color: var(--primary);
+    border: none;
+    color: var(--white);
+    margin-left: -131px;
+    cursor: pointer;
 }
-.form form label .checkmark{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+.footer-container .row-1 .subscribe span{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--white);
+    opacity: .6;
+}
+.footer-container .row-1 .subscribe{
+    margin-bottom: 50px;
+    width: 495px;
+}
+.footer-container .row-2{
+    display: flex;
+    gap: 130px;
+    margin-bottom: 60px;
+}
+.footer-container .row-2-item{
+    display: flex;
+    flex-direction: column;
+}
+.footer-container .row-2-item h3{
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.footer-container .row-2 h3{
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--white);
+}
+.footer-container .row-2 span, .footer-container  a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--white);
+}
+.footer-container .opacity{
+    opacity: .6;
+}
+.footer-container .row-3{
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+}
+.row-3 span{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+}
+.row-3 .go{
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+}
+.row-3 .go .to-top{
+    padding: 16px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
 }
