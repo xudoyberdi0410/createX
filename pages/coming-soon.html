@@ -15,8 +15,9 @@
 body{
     height: 95vh;
     text-align: center;
-    background-color: #222;
+    background-color: #fff;
     flex-direction: column;
+    font-family: sans-serif;
 }
 .flex-center{
     display: flex;
@@ -32,18 +33,19 @@ body{
 .circle-small{
     width: 45vmin;
     height: 45vmin;
-    background-color: #222;
+    background-color: #fff;
     border-radius: 50%;
+    font-size: 5em;
 }
 </style>
 <script>
-    let max = 5
+    let max = 0
     setInterval(()=>{
-        if (max == 101) return false
+        if (max == 100) return false
         document.querySelector('.circle-small').textContent = `${max}%`
         document.querySelector('.circle').setAttribute('style', `--max: ${max}%`)
         max++
-    }, 100)
+    }, 1000)
 
 </script>
 </body>

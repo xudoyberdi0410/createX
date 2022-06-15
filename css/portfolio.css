@@ -1,0 +1,175 @@
+header{
+    background-color: var(--gray-200);
+    background-image: url('../images/header/portfolia-header-bg-image.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding-top: 0;
+    height: 600px;
+    position: relative;
+    margin-bottom: 215px;
+}
+header .navbar{
+    margin-bottom: 80px;
+}
+header .hero{
+    background: none;
+    color: var(--gray-900);
+}
+.hero h1{
+    margin-top: 40px;
+}
+.hero-container .container p{
+    color: var(--gray-700);
+}
+.hero-container .container .gray{
+    color: var(--gray-600);
+}
+.filter{
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    bottom: -95px;
+    left: 0;
+    right: 0;
+}
+.filter__item{
+    width: 230px;
+    height: 154px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+    position: relative;
+    z-index: 3;
+    gap: 16px;
+    transition: all .3s ease;
+    color: var(--gray-600);
+    cursor: pointer;
+}
+.filter__item:hover{
+    color: var(--gray-900);
+}
+.all-projects{
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0px 60px 80px -20px rgba(255, 90, 48, 0.16), 0px 26px 24px -10px rgba(255, 90, 48, 0.1), 0px 12px 10px -6px rgba(255, 90, 48, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+}
+.all-projects:hover{
+    color: var(--white);
+}
+
+
+.main-wrapper{
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-wrapper .main-item{
+    overflow: hidden;
+    width: 390px;
+    height: 440px;
+    padding-bottom: 24px;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+.main-wrapper .main-item img{
+    transition: all .3s ease;
+    top: 0;
+    left: 0;
+    height: 345px;
+    width: 390px;
+    position: absolute;
+    z-index: 5;
+}
+.main-wrapper .main-item .txt{
+    padding-top: 16px;
+    position: absolute;
+    z-index: 6;
+    bottom: -55px;
+    right: 0;
+    left: 0;
+    background: var(--white);
+    transition: .3s;
+}
+.main-wrapper .main-item .txt p{
+    margin: 0;
+}
+.main-wrapper .main-item:hover .txt{
+    bottom: 10px;
+}
+.main-wrapper .main-item:hover .btn{
+    display: inline-block;
+    margin: 10px 0 0;
+}
+.main-wrapper .main-item .btn{
+    display: inline-block;
+    margin: 20px 0 0;
+    position: relative;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.main-wrapper .main-item .btn a{
+    color: var(--primary);
+}
+.main-wrapper .main-item .btn:hover{
+    color: var(--white);
+}
+.main-wrapper .main-item .btn:hover a{
+    color: var(--white);
+}
+.load-more{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-800);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    cursor: pointer;
+    
+}
+.load-more svg{
+    transition: all .3s ease;
+}
+.load-more:active svg{
+    transform: rotate(-180deg);
+}
+
+.partners-container h2{
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--gray-900);
+    margin-bottom: 60px;
+}
+.partners-container .wrapper{
+    gap: 40px;
+    margin: 0;
+    margin-bottom: 120px;
+}
+.partners-container .wrapper img{
+    width: 120px;
+    -webkit-filter: grayscale(1);
+    transition: all .3s ease-in;
+}
+.partners-container img:hover{
+    -webkit-filter: none;
+}
+.partners-container .testimonials .partners-bg{
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+.second-partners{
+    background-color: var(--white);
+    margin-top: 120px;
+}

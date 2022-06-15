@@ -64,6 +64,9 @@ header{
 .navbar nav ul li a{
     color: var(--gray-800);
 }
+.navbar nav ul li a.this{
+    color: var(--primary);
+}
 .call-to-action{
     display: flex;
     gap: 38px;
@@ -583,6 +586,14 @@ p{
     bottom: -25%;
 }
 /* static */
+.statisc-news{
+    position: relative;
+    overflow: hidden;
+}
+#bg-top{
+    position: absolute;
+    top: -500px;
+}
 .statisc-container{
     text-align: center;
     padding-top: 170px;

@@ -22,3 +22,67 @@ header .hero{
 .hero-container .container .gray{
     color: var(--gray-600);
 }
+main {
+    position: relative;
+    overflow: hidden;
+}
+main .main-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    padding: 120px 0 180px;
+}
+main .main-item{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+main .main-item h2{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    color: var(--gray-900);
+}
+main .main-item p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-700);
+}
+.btn{
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    padding: 0 40px;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 52px;
+    transition: all .3s ease;
+    margin-top: 30px;
+}
+.btn:hover{
+    cursor: pointer;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+}
+.btn:hover a{
+    color: var(--white);
+}
+.btn a{
+    color: var(--primary);
+    text-decoration: none;
+}
+#bg-center{
+    position: absolute;
+    right: -200px;
+    top: 0px;
+    transform: rotate(-58.34deg);
+    z-index: -1;
+}
+#bg-bottom{
+    position: absolute;
+    left: -250px;
+    bottom: -300px;
+    transform: rotate(-58.34deg);
+    z-index: -1;
+}
